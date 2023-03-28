@@ -13,6 +13,7 @@ from transformers import LlamaTokenizer, LlamaForCausalLM, GenerationConfig
 
 if torch.cuda.is_available():
     device = "cuda"
+    device = torch.device("cuda:0")
 else:
     device = "cpu"
 
